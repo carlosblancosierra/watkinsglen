@@ -1,0 +1,167 @@
+html {
+	scroll-behavior: smooth
+}
+
+.row {
+	margin-bottom: 0
+}
+
+a {
+	color: unset
+}
+
+h1,
+h2 {
+	margin: 0 !important
+}
+
+* {
+	font-family: 'Cormorant Infant', serif;
+}
+
+.container {
+    min-width:75vw;
+}
+
+.bold,
+.font-weight-600 {
+	font-weight: 600
+}
+
+.font-070 {
+	font-size: .7rem !important;
+	line-height: .8rem !important
+}
+
+.font-080 {
+	font-size: .8rem !important;
+	line-height: .9rem !important
+}
+
+.font-090 {
+	font-size: .9rem !important;
+	line-height: 1rem !important
+}
+
+.font-100 {
+	font-size: 1rem !important;
+	line-height: 1.1rem !important
+}
+
+.font-110 {
+	font-size: 1.1rem !important;
+	line-height: 1.2rem !important
+}
+
+.font-125 {
+	font-size: 1.25rem !important;
+	line-height: 1.5rem !important
+}
+
+.font-150,
+.font-175 {
+	line-height: 2rem !important
+}
+
+.font-150 {
+	font-size: 1.5rem !important
+}
+
+.font-175 {
+	font-size: 1.75rem !important
+}
+
+.font-200 {
+	font-size: 2rem !important;
+	line-height: 2.5rem !important
+}
+
+.font-225 {
+	font-size: 2.25rem !important;
+	line-height: 2.75rem !important
+}
+
+.font-250 {
+	font-size: 2.5rem !important;
+	line-height: 3rem !important
+}
+
+.font-300 {
+	font-size: 3rem !important;
+	line-height: 3.5rem !important
+}
+
+.font-350 {
+	font-size: 3.5rem !important;
+	line-height: 4rem !important
+}
+
+.font-400 {
+	font-size: 4rem !important;
+	line-height: 4.5rem !important
+}
+
+.font-450 {
+	font-size: 4.5rem !important;
+	line-height: 5rem !important
+}
+
+.font-500 {
+	font-size: 5rem !important;
+	line-height: 5.5rem !important
+}
+
+.text-underline {
+	text-decoration: underline
+}
+
+.mh-100 {
+	min-height: 100vh !important
+}
+
+.mh-90 {
+	min-height: 90vh !important
+}
+
+.mh-65 {
+	min-height: 65vh !important
+}
+
+:root {
+	--beige: #EEE5D3;
+	--brown: #70716A;
+	--yellow: #DABC2A;
+	--green: #92964A;
+	--grey: #70716A;
+	--green2: #55490A;
+}
+
+.my-grey {
+    background-color: var(--grey) !important
+}
+
+.my-green {
+    background-color: var(--green) !important
+}
+
+.my-green2 {
+    background-color: var(--green2) !important
+}
+
+.main-banner {
+    background: url('../images/main-1.jpg');
+    min-height:40vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.main-banner-side {
+    background: url('../images/main-1.jpg');
+    min-height:100%;
+    background-size:cover;
+    background-position:center;
+}
+
+#amenities .card-title {
+    min-height:3.5rem;
+}
