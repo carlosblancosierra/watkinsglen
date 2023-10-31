@@ -128,6 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
 
 LOCAL_STATIC_CDN_PATH = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn')
@@ -137,6 +138,43 @@ STATIC_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'static')  # live cdn AWS S3
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
+MEDIA_URL = '/media/'  # django-storages
+
+# AWS_ACCESS_KEY_ID = "AKIAIWMAKUKZAEUHDANQ"
+#
+# AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_ACCESS_KEY_ID = "AKIARBFJSQ6R42T6TAFU"
+
+AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_STORAGE_BUCKET_NAME = 'watkinsglen-static'
+
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3-accelerate.amazonaws.com'
+
+AWS_DEFAULT_ACL = 'public-read'
+
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+
+AWS_LOCATION = 'static'
+
+AWS_QUERYSTRING_AUTH = False
+
+AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+
+EMAIL_STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}'
+
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+AWS_S3_REGION_NAME = 'eu-east-1'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
