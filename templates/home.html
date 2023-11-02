@@ -163,16 +163,16 @@
         <h2 class="center my-3">Available Homesites</h2>
     </div>
     <div class="row">
-        {% for i in "123456789" %}
+        {% for homesite in homesites %}
         <div class="col s12 m4">
             <div class="card">
                 <img class="responsive-img"
-                     src="https://images.squarespace-cdn.com/content/v1/58497d0f6b8f5bc8ca92670f/22110162-2626-46ce-b942-714dd7da6693/Watkins+Glen+Lot+1.jpeg?format=2500w">
+                     src="{{ homesite.listing_picture.url }}">
                 <div class="p-3 px-4">
-                    <p class="mt-0 text-uppercase">Available for Presale</p>
-                    <h3 class="font-150 mt-1 bold">8405 Portmarnoch Court</h3>
-                    <p>Watkins Glen - Lot 1</p>
-                    <p><i class="fa-solid fa-maximize"></i> 4.69 acres</p>
+                    <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>
+                    <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>
+                    <p>{{ homesite }}</p>
+                    <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
                 </div>
             </div>
         </div>
