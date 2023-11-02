@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'storages',
+
+    'addresses',
+    'communities',
+    'homesites',
+    'plans',
 ]
 
 LOGIN_URL = '/login'
