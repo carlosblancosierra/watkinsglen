@@ -15,6 +15,20 @@ $(document).ready(function () {
 
     })
 
+    $(".owl-carousel-featured").each(function () {
+            $(this).owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3000, // Adjust as needed
+                nav: true,
+                dots: false,
+                navText : ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>']
+
+            });
+        });
+
     // Thumbnail Carousel
         $(".thumbnail-carousel").owlCarousel({
             items: 3, // Number of thumbnail items to display

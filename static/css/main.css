@@ -165,3 +165,41 @@ h2 {
 #amenities .card-title {
     min-height:3.5rem;
 }
+
+
+.owl-carousel .owl-nav {
+    position: absolute!important;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.owl-carousel .owl-prev {
+    position: absolute!important;
+    left: 0px!important; /* Position on the left */
+}
+
+.owl-carousel .owl-next {
+    position: absolute!important;
+    right: 0px!important; /* Position on the right */
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+    background: rgba(255, 255, 255, 0.0)!important; /* White with transparency */
+    color: rgba(255, 255, 255, 0.5)!important; /* Arrow color */
+    font-size: 1.5rem!important;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.owl-carousel .owl-prev:hover,
+.owl-carousel .owl-next:hover {
+    background: rgba(255, 255, 255, 0.8); /* Hover background color */
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    padding: 0px 10px!important; /* Increase the size */
+}

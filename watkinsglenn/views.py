@@ -10,9 +10,13 @@ from homesites.models import Homesite
 
 
 def home_page(request):
-    homesites = Homesite.objects.filter(featured=False, hidden=False)
+    qs = Homesite.objects.filter(hidden=False)
+    featured = qs.filter(featured=True)
+    homesites = qs.exclude(pk__in=featured)
+
     context = {
         "homesites": homesites,
+        "featured": featured,
     }
 
     return render(request, "home.html", context)
