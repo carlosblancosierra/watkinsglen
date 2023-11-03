@@ -15,6 +15,7 @@ class Homesite(models.Model):
     aerial_shot = models.ImageField(upload_to='aerial_shots/', null=True, blank=True)
     STATUS_CHOICES = [
         ('presale', 'Available for Presale'),
+        ('coming', 'Coming Soon'),
         ('construction', 'Under Construction'),
         ('ready', 'Move-in Ready'),
     ]
