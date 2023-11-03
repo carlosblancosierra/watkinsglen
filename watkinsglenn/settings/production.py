@@ -178,7 +178,7 @@ EMAIL_STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}'
 
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
-AWS_S3_REGION_NAME = 'eu-east-1'
+AWS_S3_REGION_NAME = 'us-east-1'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
