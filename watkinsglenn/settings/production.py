@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x*o+lper#&($$!@nmj4c2)v2#$n-)f-+^swfbq(jg_56t=+#^4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-STATIC_LOCAL = True
+STATIC_LOCAL = False
 
 ALLOWED_HOSTS = ['watkinsglen-c6cd899e97f9.herokuapp.com', 'watkinsglen.exeterbuilding.com']
 
