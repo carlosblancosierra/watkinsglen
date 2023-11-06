@@ -15,12 +15,26 @@ h2 {
 	margin: 0 !important
 }
 
-* {
+p, btn {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4 {
+	font-family: 'Cormorant Infant', serif;
+}
+
+.my-font {
 	font-family: 'Cormorant Infant', serif;
 }
 
 .container {
-    min-width:75vw;
+    min-width:95vw;
+}
+
+@media only screen and (min-width: 993px){
+    .container {
+        min-width:85vw;
+    }
 }
 
 .bold,
@@ -129,7 +143,7 @@ h2 {
 
 :root {
 	--beige: #EEE5D3;
-	--brown: #70716A;
+	--brown: #AC9B81;
 	--yellow: #DABC2A;
 	--green: #92964A;
 	--grey: #70716A;
@@ -140,6 +154,15 @@ h2 {
     background-color: var(--grey) !important
 }
 
+.my-yellow {
+    background-color: var(--yellow) !important
+}
+
+.my-yellow-text {
+    color: var(--yellow) !important
+}
+
+
 .my-green {
     background-color: var(--green) !important
 }
@@ -148,24 +171,14 @@ h2 {
     background-color: var(--green2) !important
 }
 
-.main-banner {
-    background: url('../images/main-1.jpg');
-    min-height:40vh;
-    background-size:cover;
-    background-position:center;
+
+.my-beige {
+    background-color: var(--beige) !important
 }
 
-.main-banner-side {
-    background: url('../images/main-1.jpg');
-    min-height:100%;
-    background-size:cover;
-    background-position:center;
+.my-brown {
+    background-color: var(--brown) !important
 }
-
-#amenities .card-title {
-    min-height:3.5rem;
-}
-
 
 .owl-carousel .owl-nav {
     position: absolute!important;
@@ -202,4 +215,258 @@ h2 {
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
     padding: 0px 10px!important; /* Increase the size */
+}
+
+.owl-carousel .owl-nav {
+    position: absolute!important;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.owl-carousel .owl-prev {
+    position: absolute!important;
+    left: 0px!important; /* Position on the left */
+}
+
+.owl-carousel .owl-next {
+    position: absolute!important;
+    right: 0px!important; /* Position on the right */
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+    background: rgba(255, 255, 255, 0.0)!important; /* White with transparency */
+    color: rgba(255, 255, 255, 0.5)!important; /* Arrow color */
+    font-size: 1.5rem!important;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.owl-carousel .owl-prev:hover,
+.owl-carousel .owl-next:hover {
+    background: rgba(255, 255, 255, 0.8); /* Hover background color */
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    padding: 0px 10px!important; /* Increase the size */
+}
+
+.owl-carousel-main .owl-nav {
+    position: absolute!important;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.owl-carousel-main .owl-prev {
+    position: absolute!important;
+    left: -40px!important; /* Position on the left */
+}
+
+.owl-carousel-main .owl-next {
+    position: absolute!important;
+    right: -40px!important; /* Position on the right */
+}
+
+.owl-carousel-main .owl-prev,
+.owl-carousel-main .owl-next {
+    background: transparent!important; /* Transparent background */
+    color: #000!important; /* Black arrow color */
+    font-size: 3.5rem!important;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.owl-carousel-main .owl-prev:hover,
+.owl-carousel-main .owl-next:hover {
+    background: rgba(255, 255, 255, 0.8); /* Hover background color */
+}
+
+.owl-carousel-main .owl-nav button.owl-next,
+.owl-carousel-main .owl-nav button.owl-prev {
+    padding: 0px 10px!important; /* Increase the size */
+}
+
+
+
+
+#home-banner {
+    background: url('../images/main-ridge2.jpg');
+    min-height:95vh;
+    background-size:cover;
+    background-position:center;
+    color:white;
+    position: relative;
+}
+
+#home-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay on top of the image (increase if needed) */
+    pointer-events: none; /* Allows clicks to pass through the overlay to the image */
+}
+
+#home-banner .row {
+    position: relative;
+    z-index: 2; /* Place the text on top of the overlay */
+}
+
+#home-banner h1 {
+    margin-top:1rem!important;
+    font-size: 3rem;
+    line-height:4rem;
+    text-transform:uppercase;
+    text-align: center;
+
+}
+
+#home-banner h2 {
+    font-size: 1.5rem;
+    line-height:1.5rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-align: center;
+
+}
+
+.home-banner-1 {
+    font-size: 5rem;
+    line-height:4rem;
+    font-weight:bold;
+    margin: 2.5rem 0;
+}
+
+.home-banner-li {
+    font-size: 1.2rem;
+    margin: 0 0;
+}
+
+.home-banner-2 {
+    font-size: 2rem;
+    line-height:3rem;
+}
+.home-banner-exeter-logo {
+    width:50%;
+}
+
+.hexagon-container {
+    width: 100%; /* Adjust the width and height as needed */
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+    margin-bottom:2rem;
+    display:none;
+}
+
+.hexagon-container img {
+    width: 160%;
+    height: auto;
+    display: block;
+}
+
+/* Media Query for Medium Screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* Add styles for medium screens here */
+}
+
+/* Media Query for Large Screens (desktops) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Add styles for large screens here */
+}
+
+/* Media Query for Extra-Large Screens (large desktops) */
+@media only screen and (min-width: 1201px) {
+
+    #home-banner h1 {
+        font-size: 6rem;
+        line-height:4rem;
+        text-transform:uppercase;
+        text-align: left;
+    }
+
+    #home-banner h2 {
+        font-size: 2.5rem;
+        line-height:2.5rem;
+        text-transform:uppercase;
+        font-weight:bold;
+        text-align: left;
+
+    }
+
+    .home-banner-1 {
+        font-size: 8rem;
+        line-height:5rem;
+        margin: 5rem 0;
+    }
+
+    .home-banner-li {
+        font-size: 2rem;
+        line-height:2.5rem;
+        font-family: 'Cormorant Infant', serif;
+
+    }
+
+    .home-banner-2 {
+        font-size: 3rem;
+        line-height:3rem;
+    }
+
+    .hexagon-container {
+        width: 80%; /* Adjust the width and height as needed */
+        position: relative;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        margin-top: 4rem;
+        overflow: hidden;
+        display:block;
+        float: right;
+    }
+
+    .hexagon-container img {
+        width: 160%;
+        height: auto;
+        display: block;
+    }
+
+    .home-banner-exeter-logo {
+        width:40%;
+        float: right;
+    }
+
+    #amenities .card-title {
+        min-height:1.5rem;
+    }
+}
+
+#amenities {
+    background: url('../images/main-2.jpg');
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+#amenities::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay on top of the image (increase if needed) */
+    pointer-events: none; /* Allows clicks to pass through the overlay to the image */
+}
+
+#amenities .row {
+    position: relative;
+    z-index: 2; /* Place the text on top of the overlay */
 }

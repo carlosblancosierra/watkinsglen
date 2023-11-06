@@ -6,14 +6,40 @@ $(document).ready(function () {
         margin:10,
         responsive:{
             0:{
-                items:1
+                items:1.2
+            },
+            1000 :{
+                items:2.2
             }
         },
         mouseDrag: true,
         nav: true, // Show navigation arrows
         dots: true,
-
     })
+
+    // Initialize the miniature strip carousel
+    $(".miniature-strip").owlCarousel({
+        items: 3,
+        center: true,
+        dots: false,
+        nav: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 4,
+            },
+
+        },
+        URLhashListener: true,
+        startPosition: 'URLHash',
+        // Connect the miniature strip to the main carousel
+        onInitialized: function (event) {
+            event.item.index = event.page.index - 1;
+            var currentIndex = event.item.index;
+            var mainCarousel = $(".owl-carousel-main").data('owl.carousel');
+            mainCarousel.to(currentIndex);
+        },
+    });
 
     $(".owl-carousel-featured").each(function () {
             $(this).owlCarousel({

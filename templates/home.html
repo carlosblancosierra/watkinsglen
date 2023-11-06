@@ -7,24 +7,53 @@
 {% block meta_description %}{% endblock %}
 
 {% block content %}
+<section>
+    <div class="row valign-wrapper" id="home-banner">
+        <div class="container">
+            <div class="row p-md-5 mt-md-5">
+                <div class="col s12 m6">
+                    <!--                    <img src="{% static 'images/exeter-logo.png' %}" class="home-banner-exeter-logo-1 responsive-img">-->
+                    <h1>Watkins Glen</h1>
+                    <h2 class="my-yellow-text">Wake Forest</h2>
 
-<section class="row">
-    <nav class="my-green2">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">WATKINS GLEN</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="">Home Opportunities</a></li>
-                <li><a href="">Amenities</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
+                    <p class="home-banner-1 my-font">Live Beautifully</p>
+
+                    <p class="home-banner-li"><span class="my-yellow-text">Exclusively Built by</span> Exeter Building
+                        Company</p>
+                    <p class="home-banner-li">10 <span class="my-yellow-text">Individually Gated</span> Estate Lots</p>
+                    <p class="home-banner-li">1.3 to 5.0 Acres Each</p>
+                    <p class="home-banner-li">No HOA & <span class="my-yellow-text">Pool-Ready</span></p>
+
+                    <p class="home-banner-2 my-font">Presented by <br/> MARQUIS REALTY</p>
+
+                    <p><a href="#available" class="btn my-green bold">Home Opportunities</a></p>
+                    <p><a href="#amenities" class="btn white black-text bold">Amenities</a></p>
+                    <p><a href="#contact" class="btn white black-text bold">Contact us</a></p>
+
+                </div>
+                <div class="col s12 m5">
+                    <img src="{% static 'images/exeter-logo.png' %}" class="home-banner-exeter-logo responsive-img">
+                    <!--                    <img src="{% static 'images/main-1.jpg' %}" class="responsive-img">-->
+
+                    <div class="hexagon-container">
+                        <img src="{% static 'images/main-2.jpg' %}">
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
 </section>
 
-<section class="container">
+<section class="container my-5">
     <div class="row">
-        <div class="col s12 m6 mt-4">
-            <h1>Live Beautifully at <span class="italic">WATKINS GLEN</span></h1>
+        <div class="col s12 m8">
+            <img class="responsive-img" src="{% static 'images/wg-map.jpg' %}">
+        </div>
+
+        <div class="col s12 m4 px-md-5">
+            <h2 class=" mb-3">Community</h2>
+
             <p class="font-150">
                 Large, private lots with a lineage dating back to the 1700s— the luxury, gated community at Watkins Glen
                 is a rare opportunity to invest in something special.</p>
@@ -34,132 +63,117 @@
             <p class="font-150">
                 These ten lots range between 1.3 and 4.9 acres each, providing the ideal space to create your dream
                 home.</p>
-            <!--            <img class="responsive-img" src="{% static 'images/wg-map.jpg' %}">-->
-        </div>
-        <div class="col s12 m6">
-            <!--            <div class="main-banner-side"></div>-->
-            <img src="{% static 'images/main-2-2.jpg' %}" class="responsive-img">
         </div>
     </div>
 </section>
 
-<section class="container mt-5">
-    <div class="row">
-        <div class="col s12">
-            <h2 class=" mb-3">Community Map</h2>
-            <img class="responsive-img" src="{% static 'images/wg-map.jpg' %}">
+<section class="my-green">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="center mb-3">Meet Watkins Glen</h2>
+            </div>
 
+            <div class="col s12">
+                <div class="owl-carousel owl-carousel-main">
+                    <div class="item">
+                        <video class='plyr' poster="" playsinline controls>
+                            <source src="https://d3jrfnjafi7hoa.cloudfront.net/videos/Watkins+Glen/Watkins+Glen.mp4"
+                                    type="video/mp4"/>
+                        </video>
+                    </div>
+
+                    <div class="item"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></div>
+                    <div class="item"><img src="{% static 'images/gallery/2.jpg' %}" alt=""></div>
+                    <div class="item"><img src="{% static 'images/gallery/3.jpg' %}" alt=""></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<div class="container mt-5" id="amenities">
-    <div class="row">
-        <div class="col s12">
-            <h2 class="mb-3">Featured Amenities</h2>
+<section class="my-brown" id="amenities">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="mb-3 white-text">Amenities</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Individual Front Gates and Fencing</span>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Individual Front Gates and Fencing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Swimming Pool Option On All Lots</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">No HOA</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Swimming Pool Option On All Lots</span>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Boat & R.V. Storage, Large Out Buildings & Garages Allowed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">No City Taxes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Heavily Covered In Mature Hardwood Trees</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">No HOA</span>
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Gentle Topography</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Boat & R.V. Storage, Large Out Buildings & Garages Allowed</span>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Community Water System & Individual Septic Systems</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">No City Taxes</span>
+            <div class="col s12 m6 l4">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title font-125">Natural Gas, Cable TV, High-Speed Internet Ready</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Heavily Covered In Mature Hardwood Trees</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Gentle Topography</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Community Water System & Individual Septic Systems</span>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card my-green2 white-text">
-                <div class="card-content">
-                    <span class="card-title font-125">Natural Gas, Cable TV, High-Speed Internet Ready</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="container my-5">
-    <div class="row">
-        <div class="col s12">
-            <h2 class="center mb-3">Meet Watkins Glen</h2>
-        </div>
-        <div class="col s12 m6">
-            <div class="video-container">
-                <video class='plyr' poster="" playsinline controls>
-                    <source src="https://d3jrfnjafi7hoa.cloudfront.net/videos/Watkins+Glen/Watkins+Glen.mp4"
-                            type="video/mp4"/>
-                </video>
-            </div>
-        </div>
-        <div class="col s12 m6">
-            <div class="owl-carousel owl-carousel-main">
-                <div class="item"><img src="{% static 'images/gallery/1.jpg' %}" alt=""></div>
-                <div class="item"><img src="{% static 'images/gallery/2.jpg' %}" alt=""></div>
-                <div class="item"><img src="{% static 'images/gallery/3.jpg' %}" alt=""></div>
-            </div>
-            <!--            <div class="thumbnail-carousel owl-carousel">-->
-            <!--                <div class="thumbnail"><img src="{% static 'images/gallery/1.jpg' %}" alt="Thumbnail 1"></div>-->
-            <!--                <div class="thumbnail"><img src="{% static 'images/gallery/2.jpg' %}" alt="Thumbnail 2"></div>-->
-            <!--                <div class="thumbnail"><img src="{% static 'images/gallery/3.jpg' %}" alt="Thumbnail 3"></div>-->
-            <!--            </div>-->
         </div>
     </div>
 </section>
-<section class="container my-5">
+
+<section class="container my-5" id="available">
     <div class="row">
-        <h2 class="center my-3">Featured</h2>
+        <h2 class="center my-3">Home Opportunities</h2>
     </div>
     <div class="row">
         {% for homesite in featured %}
@@ -183,62 +197,26 @@
         </div>
         {% endfor %}
     </div>
-    <section class="container my-5">
-        <div class="row">
-            <h2 class="center my-3">Available Homesites</h2>
-        </div>
-        <div class="row">
-            {% for homesite in homesites %}
-            <div class="col s12 m4">
-                <div class="card">
-                    <img class="responsive-img"
-                         src="{{ homesite.listing_picture.url }}">
-                    <div class="p-3 px-4">
-                        <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>
-                        <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>
-                        <p>{{ homesite }}</p>
-                        <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
-                    </div>
+    <div class="row">
+        <h2 class="center my-3">Available Homesites</h2>
+    </div>
+    <div class="row">
+        {% for homesite in homesites %}
+        <div class="col s12 m4">
+            <div class="card">
+                <img class="responsive-img"
+                     src="{{ homesite.listing_picture.url }}">
+                <div class="p-3 px-4">
+                    <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>
+                    <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>
+                    <p>{{ homesite }}</p>
+                    <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
-    </section>
+        {% endfor %}
+    </div>
+</section>
 
-    <section class="container">
-        <div class="row">
-            <div class="col s12 center">
 
-                <p class="font-200 bold">Live Beautifully at Watkins Glen.</p>
-                <p class="font-150 bold">Built Exclusively by Exeter Building Company</p>
-                <p class="font-150 bold">Starting at $1.75M</p>
-
-                <p class="font-150 bold">Located at: 8403 Portmarnock Court</p>
-                <p class="font-150 bold"> Wake Forest, NC, 27587</p>
-
-                <p class="font-250">Presented by Marquis Realty</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s5">
-                <img class="right" width="150px"
-                     src="https://static.wixstatic.com/media/1b1646_0a1ab17e9dc847e1a8ea1c4ee11aae76~mv2.png/v1/fill/w_264,h_264,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MR%20mark%202020.png">
-            </div>
-            <div class="col s6">
-                <p class="font-150 m-0">
-                    To schedule a private appointment, contact Phillip Marquis.
-                </p>
-                <p class="font-150 m-0">
-                    (919) 805-2664
-                </p>
-                <p class="font-150 m-0">
-                    phillip@marquis-realty.com
-                </p>
-                <p class="font-150 m-0">
-                    marquis-realty.com/watkinsglen
-                </p>
-            </div>
-        </div>
-    </section>
-
-    {% endblock %}
+{% endblock %}
