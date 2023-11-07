@@ -11,12 +11,9 @@ from homesites.models import Homesite
 
 def home_page(request):
     qs = Homesite.objects.filter(hidden=False)
-    featured = qs.filter(featured=True)
-    homesites = qs.exclude(pk__in=featured)
 
     context = {
-        "homesites": homesites,
-        "featured": featured,
+        "homesites": qs,
     }
 
     return render(request, "home.html", context)

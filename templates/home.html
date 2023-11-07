@@ -27,7 +27,7 @@
 
                     <p class="home-banner-2 my-font">Presented by <br/> MARQUIS REALTY</p>
 
-                    <p><a href="#available" class="btn my-green bold">Home Opportunities</a></p>
+                    <p><a href="#available" class="btn my-green bold">View Estate Lots</a></p>
                     <p><a href="#amenities" class="btn white black-text bold">Amenities</a></p>
                     <p><a href="#contact" class="btn white black-text bold">Contact us</a></p>
 
@@ -174,31 +174,31 @@
 </section>
 
 <section class="container my-5" id="available">
-    <div class="row">
-        <h2 class="center my-3">Home Opportunities</h2>
-    </div>
-    <div class="row">
-        {% for homesite in featured %}
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="owl-carousel owl-carousel-featured">
-                    {% if homesite.rendering %}
-                    <div class="item"><img src="{{ homesite.rendering.url }}" alt="{{ homesite }} rendering" loading="lazy"></div>
-                    {% endif %}
-                    {% if homesite.listing_picture %}
-                    <div class="item"><img src="{{ homesite.listing_picture.url }}" alt="{{ homesite }} listing picture" loading="lazy"></div>
-                    {% endif %}
-                </div>
-                <div class="p-3 px-4">
-                    <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>
-                    <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>
-                    <p>{{ homesite }}</p>
-                    <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+<!--    <div class="row">-->
+<!--        <h2 class="center my-3">Home Opportunities</h2>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        {% for homesite in featured %}-->
+<!--        <div class="col s12 m6">-->
+<!--            <div class="card">-->
+<!--                <div class="owl-carousel owl-carousel-featured">-->
+<!--                    {% if homesite.rendering %}-->
+<!--                    <div class="item"><img src="{{ homesite.rendering.url }}" alt="{{ homesite }} rendering" loading="lazy"></div>-->
+<!--                    {% endif %}-->
+<!--                    {% if homesite.listing_picture %}-->
+<!--                    <div class="item"><img src="{{ homesite.listing_picture.url }}" alt="{{ homesite }} listing picture" loading="lazy"></div>-->
+<!--                    {% endif %}-->
+<!--                </div>-->
+<!--                <div class="p-3 px-4">-->
+<!--                    <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>-->
+<!--                    <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>-->
+<!--                    <p>{{ homesite }}</p>-->
+<!--                    <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
     <div class="row">
         <h2 class="center my-3">Available Homesites</h2>
     </div>
