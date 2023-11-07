@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block head_title %}{{ block.super }} {% endblock %}
+{% block head_title %}{{ block.super }} Live Beautifully{% endblock %}
 
 {% block meta_description %}10 Individually Gated Estate Lots exclusively Built by Exeter Building Company.
 1.3 to 5.0 Acres Each. No HOA & Pool-Ready. Presented by MARQUIS REALTY {% endblock %}
@@ -57,18 +57,31 @@
             <div class="col s12">
                 <div class="owl-carousel owl-carousel-main">
                     <div class="item">
-                        <video class='plyr' poster="" playsinline controls>
+                        <video class='plyr' poster="{% static 'images/gallery/poster.jpg' %}" playsinline controls>
                             <source src="https://d3jrfnjafi7hoa.cloudfront.net/videos/Watkins+Glen/Watkins+Glen.mp4"
                                     type="video/mp4"/>
                         </video>
                     </div>
 
-                    <div class="item"><img src="{% static 'images/gallery/1.jpg' %}" alt="watkins glen gallery 1"
+                    <div class="item"><img src="{% static 'images/gallery/9.jpg' %}" alt="watkins glen gallery 9"
                                            loading="lazy"></div>
-                    <div class="item"><img src="{% static 'images/gallery/2.jpg' %}" alt="watkins glen gallery 2"
+                    <div class="item"><img src="{% static 'images/gallery/8.jpg' %}" alt="watkins glen gallery 8"
+                                           loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/7.jpg' %}" alt="watkins glen gallery 7"
+                                           loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/6.jpg' %}" alt="watkins glen gallery 6"
+                                           loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/5.jpg' %}" alt="watkins glen gallery 5"
+                                           loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/4.jpg' %}" alt="watkins glen gallery 4"
                                            loading="lazy"></div>
                     <div class="item"><img src="{% static 'images/gallery/3.jpg' %}" alt="watkins glen gallery 3"
                                            loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/2.jpg' %}" alt="watkins glen gallery 2"
+                                           loading="lazy"></div>
+                    <div class="item"><img src="{% static 'images/gallery/1.jpg' %}" alt="watkins glen gallery 1"
+                                           loading="lazy"></div>
+
                 </div>
             </div>
         </div>
@@ -232,9 +245,9 @@
                     <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
                     {% if homesite.plan %}
                     <p>
-                        {{ homesite.plan }}
+                        Potential Plan: {{ homesite.plan }} -
                         {% if homesite.plan.rooms %}
-                        :
+                        <i class="fa-solid fa-house"></i> {{ homesite.plan.sqft }} Sq Ft ·
                         <i class="fa-solid fa-bed"></i> {{ homesite.plan.rooms }} ·
                         <i class="fa-solid fa-bath"></i> {{ homesite.plan.bathrooms }} / {{ homesite.plan.half_baths }}
                         {% endif %}
