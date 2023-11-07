@@ -18,6 +18,7 @@ class Homesite(models.Model):
         ('coming', 'Coming Soon'),
         ('construction', 'Under Construction'),
         ('ready', 'Move-in Ready'),
+        ('presale', 'Available for Client Design'),
     ]
     status = models.CharField(max_length=12, choices=STATUS_CHOICES, null=True, blank=True)
     SALE_STATUS_CHOICES = [

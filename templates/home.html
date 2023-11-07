@@ -213,13 +213,35 @@
         {% for homesite in homesites %}
         <div class="col s12 m4">
             <div class="card">
-                <img class="responsive-img"
-                     src="{{ homesite.listing_picture.url }}" alt="{{ homesite }} rendering" loading="lazy">
+<!--                <img class="responsive-img"-->
+<!--                     src="{{ homesite.listing_picture.url }}" alt="{{ homesite }} listing picture" loading="lazy">-->
+                <div class="owl-carousel owl-carousel-featured">
+                    {% if homesite.rendering %}
+                    <div class="item"><img src="{{ homesite.rendering.url }}" alt="{{ homesite }} rendering"
+                                           loading="lazy"></div>
+                    {% endif %}
+                    {% if homesite.listing_picture %}
+                    <div class="item"><img src="{{ homesite.listing_picture.url }}" alt="{{ homesite }} listing picture"
+                                           loading="lazy"></div>
+                    {% endif %}
+                </div>
                 <div class="p-3 px-4">
                     <p class="mt-0 text-uppercase">{{ homesite.get_status_display }}</p>
                     <h3 class="font-150 mt-1 bold">{{ homesite.address.short }}</h3>
                     <p>{{ homesite }}</p>
                     <p><i class="fa-solid fa-maximize"></i> {{ homesite.lot_size }} acres</p>
+                    {% if homesite.plan %}
+                    <p>
+                        {{ homesite.plan }}
+                        {% if homesite.plan.rooms %}
+                        :
+                        <i class="fa-solid fa-bed"></i> {{ homesite.plan.rooms }} ·
+                        <i class="fa-solid fa-bath"></i> {{ homesite.plan.bathrooms }} / {{ homesite.plan.half_baths }}
+                        {% endif %}
+                    </p>
+                    {% else %}
+                    <p>Pick and Personalize your plan</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
