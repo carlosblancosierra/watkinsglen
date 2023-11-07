@@ -8,7 +8,7 @@ from plans.models import Plan
 # Create your models here.
 class Homesite(models.Model):
     # community = models.ForeignKey(Community, on_delete=models.CASCADE, null=True, blank=True)
-    lot_number = models.CharField(max_length=50, null=True, blank=True)
+    lot_number = models.IntegerField(null=True, blank=True)
     address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True, blank=True)
     listing_picture = models.ImageField(upload_to='listings/', null=True, blank=True)
     rendering = models.ImageField(upload_to='renderings/', null=True, blank=True)
