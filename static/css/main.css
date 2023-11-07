@@ -470,3 +470,14 @@ h1,h2,h3,h4 {
     position: relative;
     z-index: 2; /* Place the text on top of the overlay */
 }
+
+.sidenav li> p {
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 32px;
+    margin: 0;
+}
