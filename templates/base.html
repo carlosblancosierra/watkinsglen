@@ -2,21 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>{% block head_title %} Watkins Glen |{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %} {% endblock %}"/>
-  <meta name="keywords" content="{% block keywords %} {% endblock %}"/>
-  {% block meta_facebook %} {% endblock %}
+    <title>{% block head_title %} Watkins Glen |{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %} {% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %} {% endblock %}"/>
+    {% block meta_facebook %} {% endblock %}
 
-  <!-- css -->
-  {% include "base/css.html" %}
-  <!-- Google Tag Manager -->
-  <!-- End Google Tag Manager -->
+    <!-- css -->
+    {% include "base/css.html" %}
+    <!-- Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static './images/favicon.png' %}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{% static './images/favicon.png' %}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G06W3MMCLM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-G06W3MMCLM');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static './images/favicon.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static './images/favicon.png' %}">
 </head>
 
 <body>
@@ -26,9 +36,9 @@
 {% include 'base/navbar.html' %}
 
 <div class="mh-90 mb-5">
-  {% block content %}
+    {% block content %}
 
-  {% endblock %}
+    {% endblock %}
 </div>
 
 {% include 'base/footer.html' %}
