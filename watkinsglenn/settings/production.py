@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x*o+lper#&($$!@nmj4c2)v2#$n-)f-+^swfbq(jg_56t=+#^4'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'xp$!2@)-er#&(fnmj4c2)4v2#$n$-4+^swfbq(jg8_56t*o0+l=+#^4')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -146,13 +146,10 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
 MEDIA_URL = '/media/'  # django-storages
 
-# AWS_ACCESS_KEY_ID = "AKIAIWMAKUKZAEUHDANQ"
-#
-# AWS_SECRET_ACCESS_KEY = "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"
 
-AWS_ACCESS_KEY_ID = "AKIARBFJSQ6R42T6TAFU"
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 
-AWS_SECRET_ACCESS_KEY = "PhDTHw+Anc5whxTB673SepMZ3PIlYPr+7B22mqem"
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 AWS_STORAGE_BUCKET_NAME = 'watkinsglen-static'
 
