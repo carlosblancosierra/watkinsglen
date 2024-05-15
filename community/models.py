@@ -30,3 +30,7 @@ def pre_save_community_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)
 
+def __str__(self):
+    return self.name
+
+
