@@ -1,1 +1,48 @@
-.py[cod]
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django project settings
+*.env
+*.sqlite3
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Virtual environment
+venv/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Mac specific files
+.DS_Store
+
+# PyCharm specific files
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+
+# Visual Studio Code specific files
+.vscode/
+*.code-workspace
+
+# Compiled Python files
+*.pyc
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
