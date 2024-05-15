@@ -4,14 +4,14 @@ from django.utils.text import slugify
 # Create your models here.
 class Community(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, null=True, blank=True)
     city = models.CharField(max_length=255, null=True, blank=True, default='Raleigh')
     state = models.CharField(max_length=255, null=True, blank=True, default='NC')
     zip = models.CharField(max_length=5, null=True, blank=True)
     lat = models.TextField(null=True, blank=True)
     long = models.TextField(null=True, blank=True)
-    image_front_landspace = models.ImageField(upload_to='community-images/')
-    image_front_portrait = models.ImageField(upload_to='community-images/')
+    image_front_landspace = models.ImageField(upload_to='community-images/', null=True, blank=True)
+    image_front_portrait = models.ImageField(upload_to='community-images/', null=True, blank=True)
     address = models.ForeignKey('address.Address', on_delete=models.PROTECT , null=True, blank=True)
     active = models.BooleanField(default=True)
 
