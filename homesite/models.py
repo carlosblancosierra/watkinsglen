@@ -34,7 +34,7 @@ class Homesite(models.Model):
         return None
 
     def __str__(self):
-        return f"{self.community} - Lot {self.lot_number}"
+        return f"{self.community} - Lot {self.lot_number} - {self.address.short}"
 
     class Meta:
         ordering = ['lot_number']

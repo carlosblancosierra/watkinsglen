@@ -19,8 +19,7 @@ class Community(models.Model):
     order = models.PositiveIntegerField(default=0)
 
     def __str__(self) -> str:
-        def __str__(self) -> str:
-            return f"{self.name}, {self.city}, {self.active}"
+        return f"{self.name}, {self.city}, {self.active}"
 
     class Meta:
         ordering = ['order']
