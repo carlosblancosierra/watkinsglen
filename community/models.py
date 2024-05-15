@@ -39,12 +39,3 @@ def create_slug(instance, new_slug=None):
 def pre_save_community_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)
-
-    # Get the maximum order value
-    max_order = Community.objects.aggregate(models.Max('order'))['order__max']
-
-    # Increment the order of all communities with order greater than or equal to the new community's order
-    Community.objects.filter(order__gte=instance.order).update(order=models.F('order') + 1)
-
-    # Set the order of the new community to be the maximum order + 1
-    instance.order = max_order + 1 if max_order else 0
