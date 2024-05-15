@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
 # Create your models here.
 class Community(models.Model):
@@ -14,6 +16,14 @@ class Community(models.Model):
     image_front_portrait = models.ImageField(upload_to='community-images/', null=True, blank=True)
     address = models.ForeignKey('address.Address', on_delete=models.PROTECT , null=True, blank=True)
     active = models.BooleanField(default=True)
+    order = models.PositiveIntegerField(default=0)
+
+    def __str__(self) -> str:
+        def __str__(self) -> str:
+            return f"{self.name}, {self.city}, {self.active}"
+
+    class Meta:
+        ordering = ['order']
 
 def create_slug(instance, new_slug=None):
     slug = slugify(instance.name)
@@ -26,11 +36,16 @@ def create_slug(instance, new_slug=None):
         return create_slug(instance, new_slug=new_slug)
     return slug
 
+@receiver(pre_save, sender=Community)
 def pre_save_community_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)
 
-def __str__(self):
-    return self.name
+    # Get the maximum order value
+    max_order = Community.objects.aggregate(models.Max('order'))['order__max']
 
+    # Increment the order of all communities with order greater than or equal to the new community's order
+    Community.objects.filter(order__gte=instance.order).update(order=models.F('order') + 1)
 
+    # Set the order of the new community to be the maximum order + 1
+    instance.order = max_order + 1 if max_order else 0
