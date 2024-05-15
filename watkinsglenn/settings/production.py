@@ -39,12 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'storages',
-
     'addresses',
     'communities',
     'homesites',
     'plans',
+
+    'rest_framework',
+    'drf_spectacular',
+
+
+    'address',
+    'community',
+    'homesite',
+    'image',
+    'plan',
 ]
 
 LOGIN_URL = '/login'
