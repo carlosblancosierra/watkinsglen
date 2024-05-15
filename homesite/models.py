@@ -11,14 +11,14 @@ class Homesite(models.Model):
     community = models.ForeignKey(Community, on_delete=models.PROTECT, null=True, blank=True)
     lot_number = models.IntegerField(null=True, blank=True)
     address = models.ForeignKey(Address, on_delete=models.PROTECT, null=True, blank=True)
-    listing_picture_landscape = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True)
-    listing_picture_portrait = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True)
+    listing_picture_landscape = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, related_name='listing_picture_landscape')
+    listing_picture_portrait = models.ForeignKey(Image, on_delete=models.PROTECT, null=True, blank=True, related_name='listing_picture_portrait')
     status = models.CharField(max_length=50, choices=HomesiteStatus.values(), default=HomesiteStatus.LOT.value)
     sale_status = models.CharField(max_length=50, choices=HomesiteSaleStatus.values(), default=HomesiteSaleStatus.AVAILABLE.value)
 
-    construction_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True)
-    move_in_ready_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True)
-    lot_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True)
+    construction_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True, related_name='construction_gallery')
+    move_in_ready_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True, related_name='move_in_ready_gallery')
+    lot_gallery = models.ForeignKey(Gallery, on_delete=models.PROTECT, null=True, blank=True, related_name='lot_gallery')
 
     plan = models.ForeignKey(Plan, on_delete=models.PROTECT, null=True, blank=True)
 
