@@ -26,13 +26,6 @@ class Homesite(models.Model):
     lot_size = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     active = models.BooleanField(default=True)
 
-
-    @property
-    def community(self):
-        if self.address:
-            return self.address.community
-        return None
-
     def __str__(self):
         return f"{self.community} - Lot {self.lot_number} - {self.address.short}"
 
