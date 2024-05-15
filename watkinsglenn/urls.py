@@ -23,6 +23,7 @@ urlpatterns = [
     path('api/', include('community.urls')),
     path('api/', include('homesite.urls')),
     path('api/', include('plan.urls')),
+    path('api/', include('image.urls')),
 ]
 
 

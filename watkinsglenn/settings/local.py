@@ -43,6 +43,16 @@ INSTALLED_APPS = [
     'communities',
     'homesites',
     'plans',
+
+    'rest_framework',
+    'drf_spectacular',
+
+
+    'address',
+    'community',
+    'homesite',
+    'image',
+    'plan',
 ]
 
 LOGIN_URL = '/login'
@@ -143,4 +153,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MESSAGE_TAGS = {
     messages.ERROR: 'red',
     messages.SUCCESS: 'green',
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# DRF Spectacular settings
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
 }

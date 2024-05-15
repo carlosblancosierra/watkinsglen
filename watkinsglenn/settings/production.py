@@ -187,3 +187,12 @@ MESSAGE_TAGS = {
     messages.ERROR: 'red',
     messages.SUCCESS: 'green',
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# DRF Spectacular settings
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
+}
